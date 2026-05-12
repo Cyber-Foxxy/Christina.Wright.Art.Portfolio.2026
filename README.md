@@ -1,1 +1,1 @@
-Upload photography.html, photography.css, photography.js, and images/photography to your GitHub repo root. Owner preview password: Christina1981. GitHub Pages cannot permanently save uploads without a backend; this upload tool previews locally only.
+Upload ai-art.html, ai-art.css, ai-art.js, and images/ai-art/ to your repo root. Homepage carousel link should be href="ai-art.html". Owner preview password: Christina1981.
