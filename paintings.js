@@ -8,7 +8,24 @@ for(let i=1;i<=18;i++){
   item.className = "gallery-item";
 
   item.innerHTML = `
-  <img src="images/paintings/painting-${number}.jpg"
+  <img src="images/paintings/painting-01.jpg"
+  "images/paintings/painting-02.jpg"
+  "images/paintings/painting-03.jpg"
+  "images/paintings/painting-04.jpg"
+  "images/paintings/painting-05.jpg"
+  "images/paintings/painting-06.jpg"
+  "images/paintings/painting-07.jpg"
+  "images/paintings/painting-08.jpg"
+  "images/paintings/painting-09.jpg"
+  "images/paintings/painting-10.jpg"
+  "images/paintings/painting-11.jpg"
+  "images/paintings/painting-12.jpg"
+  "images/paintings/painting-13.jpg"
+  "images/paintings/painting-14.jpg"
+  "images/paintings/painting-15.jpg"
+  "images/paintings/painting-16.jpg"
+  "images/paintings/painting-17.jpg"
+  "images/paintings/painting-18.jpg"
   alt="Painting ${number}">
   `;
 
