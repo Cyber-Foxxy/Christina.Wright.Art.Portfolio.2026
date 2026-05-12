@@ -1,1 +1,18 @@
-Upload ai-art.html, ai-art.css, ai-art.js, and images/ai-art/ to your repo root. Homepage carousel link should be href="ai-art.html". Owner preview password: Christina1981.
+Main page update with interactive rotating category carousel.
+
+Upload/replace:
+- index.html
+- style.css
+- script.js
+- images folder
+
+Next category pages to create:
+ai-art.html
+photography.html
+comics.html
+digital-art.html
+drawings.html
+paintings.html
+sky-whale.html
+web-design.html
+web-games.html
