@@ -1,1 +1,40 @@
 const menuToggle=document.querySelector(".menu-toggle");const navLinks=document.querySelector(".nav-links");const lightbox=document.getElementById("lightbox");const lightboxImage=document.getElementById("lightboxImage");const lightboxCaption=document.getElementById("lightboxCaption");const closeBtn=document.querySelector(".lightbox-close");const prevBtn=document.querySelector(".lightbox-prev");const nextBtn=document.querySelector(".lightbox-next");let currentIndex=0;document.getElementById("year").textContent=new Date().getFullYear();menuToggle.addEventListener("click",()=>navLinks.classList.toggle("open"));function getCards(){return Array.from(document.querySelectorAll(".art-card"))}function openLightbox(index){const card=getCards()[index];if(!card)return;const img=card.querySelector("img");const title=card.querySelector("h3")?.textContent||"Drawing";const desc=card.querySelector("p")?.textContent||"";currentIndex=index;lightboxImage.src=img.src;lightboxImage.alt=img.alt;lightboxCaption.textContent=`${title} — ${desc}`;lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false")}function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");lightboxImage.src=""}function showNext(){currentIndex=(currentIndex+1)%getCards().length;openLightbox(currentIndex)}function showPrev(){currentIndex=(currentIndex-1+getCards().length)%getCards().length;openLightbox(currentIndex)}getCards().forEach((card,index)=>card.addEventListener("click",()=>openLightbox(index)));closeBtn.addEventListener("click",closeLightbox);nextBtn.addEventListener("click",showNext);prevBtn.addEventListener("click",showPrev);lightbox.addEventListener("click",event=>{if(event.target===lightbox)closeLightbox()});document.addEventListener("keydown",event=>{if(!lightbox.classList.contains("open"))return;if(event.key==="Escape")closeLightbox();if(event.key==="ArrowRight")showNext();if(event.key==="ArrowLeft")showPrev()});
+/* Music player */
+const music = document.getElementById("siteMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (music && musicToggle) {
+  music.volume = 0.15;
+
+  const savedTime = localStorage.getItem("musicTime");
+
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
+
+  if (localStorage.getItem("musicPlaying") === "true") {
+    musicToggle.textContent = "♫ Resume Music";
+  }
+
+  musicToggle.addEventListener("click", async () => {
+    try {
+      if (music.paused) {
+        await music.play();
+        localStorage.setItem("musicPlaying", "true");
+        musicToggle.textContent = "♫ Pause Music";
+      } else {
+        music.pause();
+        localStorage.setItem("musicPlaying", "false");
+        musicToggle.textContent = "♫ Play Music";
+      }
+    } catch {
+      musicToggle.textContent = "Click Again";
+    }
+  });
+
+  setInterval(() => {
+    if (!music.paused) {
+      localStorage.setItem("musicTime", music.currentTime);
+    }
+  }, 1000);
+}
