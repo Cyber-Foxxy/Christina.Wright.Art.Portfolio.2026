@@ -1,0 +1,1 @@
+Upload ai-art.html, ai-art.css, ai-art.js, and the images/ai-art folder directly into your repo root. Do not upload the outer christina-ai-art-page-fixed folder. Homepage carousel link: href="ai-art.html"
