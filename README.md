@@ -1,18 +1,1 @@
-Main page update with interactive rotating category carousel.
-
-Upload/replace:
-- index.html
-- style.css
-- script.js
-- images folder
-
-Next category pages to create:
-ai-art.html
-photography.html
-comics.html
-digital-art.html
-drawings.html
-paintings.html
-sky-whale.html
-web-design.html
-web-games.html
+Upload photography.html, photography.css, photography.js, and images/photography to your GitHub repo root. Owner preview password: Christina1981. GitHub Pages cannot permanently save uploads without a backend; this upload tool previews locally only.

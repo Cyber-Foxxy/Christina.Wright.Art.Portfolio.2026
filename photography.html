@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography | Christina Wright Art Portfolio</title>
+  <link rel="stylesheet" href="photography.css" />
+</head>
+<body>
+  <header class="page-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html">Christina Wright</a>
+      <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="ai-art.html">AI Art</a><a href="comics.html">Comics</a>
+        <a href="digital-art.html">Digital Art</a><a href="drawings.html">Drawings</a><a href="paintings.html">Paintings</a>
+        <a href="sky-whale.html">Sky Whale</a><a href="web-design.html">Web Design</a><a href="web-games.html">Web Games</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <p class="eyebrow">Category Gallery</p>
+      <h1>Amateur Photography</h1>
+      <p>Nature, clouds, rivers, textures, animals, travel moments, and visual references captured through everyday photography.</p>
+      <div class="hero-actions"><a class="btn primary" href="#gallery">View Gallery</a><button class="btn secondary" id="adminToggle">Owner Upload</button></div>
+    </section>
+  </header>
+  <main>
+    <section class="owner-panel" id="ownerPanel" aria-hidden="true">
+      <div class="panel-card">
+        <div><p class="eyebrow">Private Owner Tool</p><h2>Add photos temporarily</h2><p>This previews new uploads in your own browser using local storage. For permanent public updates on GitHub Pages, upload the image to the repository and add a gallery card.</p></div>
+        <label class="upload-box"><input type="file" id="photoUpload" accept="image/*" multiple /><span>Choose photos to preview</span></label>
+        <button class="btn danger" id="clearUploads">Clear preview uploads</button>
+      </div>
+    </section>
+    <section class="gallery-wrap" id="gallery">
+      <div class="section-heading"><p class="eyebrow">Photography Collection</p><h2>Featured Photos</h2><p>Click any image to open it fullscreen.</p></div>
+      <div class="gallery-grid" id="galleryGrid">
+        <article class="photo-card"><img src="images/photography/20250328_171651.jpg" alt="Sun behind clouds with glowing rays" /><div><h3>Cloudbreak</h3><p>Sky study</p></div></article>
+        <article class="photo-card"><img src="images/photography/870d3136-5ef3-45e2-b09f-c02f51472d97photo.png.jpeg" alt="Sunset sky over yard and hills" /><div><h3>Evening Horizon</h3><p>Landscape photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240419_095135.jpg" alt="River rapids through rocky canyon" /><div><h3>River Rapids</h3><p>Nature photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240419_100654.jpg" alt="Mountain river between rocky cliffs and forest" /><div><h3>Blue River Canyon</h3><p>Landscape photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240419_100701.jpg" alt="Green river flowing through forested mountains" /><div><h3>Forest Current</h3><p>River landscape</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240419_101224.jpg" alt="Moss and tiny forest growth close-up" /><div><h3>Moss World</h3><p>Macro nature study</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240419_103143.jpg" alt="Suspension bridge over turquoise river canyon" /><div><h3>Canyon Bridge</h3><p>Travel photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240916_114912.jpg" alt="Railroad tracks leading into an iron bridge" /><div><h3>Iron Bridge Tracks</h3><p>Perspective study</p></div></article>
+        <article class="photo-card"><img src="images/photography/20241202_153254.jpg" alt="Sun beam through dark clouds over treeline" /><div><h3>Sun Beam</h3><p>Atmospheric sky study</p></div></article>
+        <article class="photo-card"><img src="images/photography/20241206_121126.jpg" alt="Close-up of frost crystals on grass" /><div><h3>Frost Crystals</h3><p>Macro texture study</p></div></article>
+        <article class="photo-card"><img src="images/photography/20250329_080835.jpg" alt="Old blue and rusty truck parked in town" /><div><h3>Vintage Truck</h3><p>Rustic vehicle photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240729_190309 - Copy.jpg" alt="Close-up of a black calf being fed grass" /><div><h3>Curious Calf</h3><p>Animal photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240806_095707 - Copy.jpg" alt="Rain drops on glass with sky behind them" /><div><h3>Rain Glass</h3><p>Texture and light study</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240808_094758 - Copy.jpg" alt="Orange cat sleeping under stacked books" /><div><h3>Book Nook Cat</h3><p>Pet photography</p></div></article>
+        <article class="photo-card"><img src="images/photography/20240729_185256 - Copy.jpg" alt="Close-up of black cow with wide angle perspective" /><div><h3>Farm Friend</h3><p>Animal portrait</p></div></article>
+      </div>
+    </section>
+  </main>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close fullscreen viewer">×</button>
+    <button class="lightbox-arrow lightbox-prev" aria-label="Previous image">‹</button>
+    <img id="lightboxImage" src="" alt="" />
+    <button class="lightbox-arrow lightbox-next" aria-label="Next image">›</button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  <footer class="footer"><p>© <span id="year"></span> Christina Wright • Missoula, Montana • <a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a></p></footer>
+  <script src="photography.js"></script>
+</body>
+</html>
