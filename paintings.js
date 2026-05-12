@@ -1,55 +1,60 @@
 const galleryGrid = document.getElementById("galleryGrid");
 
-for(let i=1;i<=18;i++){
+const paintings = [
+  "painting-01.jpg",
+  "painting-02.jpg",
+  "painting-03.jpg",
+  "painting-04.jpg",
+  "painting-05.jpg",
+  "painting-06.jpg",
+  "painting-07.jpg",
+  "painting-08.jpg",
+  "painting-09.jpg",
+  "painting-10.jpg",
+  "painting-11.jpg",
+  "painting-12.jpg",
+  "painting-13.jpg",
+  "painting-14.jpg",
+  "painting-15.jpg",
+  "painting-16.jpg",
+  "painting-17.jpg",
+  "painting-18.jpg"
+];
 
-  const number = String(i).padStart(2,"0");
-
+paintings.forEach((file, index) => {
   const item = document.createElement("div");
   item.className = "gallery-item";
 
   item.innerHTML = `
-   <img src="images/paintings/painting-01.jpg"
-   <img src="images/paintings/painting-02.jpg"
-   <img src="images/paintings/painting-03.jpg"
-   <img src="images/paintings/painting-04.jpg"
-   <img src="images/paintings/painting-05.jpg"
-   <img src="images/paintings/painting-06.jpg"
-   <img src="images/paintings/painting-07.jpg"
-   <img src="images/paintings/painting-08.jpg"
-   <img src="images/paintings/painting-09.jpg"
-   <img src="images/paintings/painting-10.jpg"
-   <img src="images/paintings/painting-11.jpg"
-   <img src="images/paintings/painting-12.jpg"
-   <img src="images/paintings/painting-13.jpg"
-   <img src="images/paintings/painting-14.jpg"
-   <img src="images/paintings/painting-15.jpg"
-   <img src="images/paintings/painting-16.jpg"
-   <img src="images/paintings/painting-17.jpg"
-   <img src="images/paintings/painting-18.jpg"
-  alt="Painting ${number}">
+    <img 
+      src="images/paintings/${file}" 
+      alt="Painting ${index + 1}"
+      loading="lazy"
+    >
   `;
 
   galleryGrid.appendChild(item);
-}
+});
 
 const images = document.querySelectorAll(".gallery-item img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const closeBtn = document.querySelector(".close-lightbox");
 
-images.forEach(img=>{
-  img.addEventListener("click",()=>{
+images.forEach((img) => {
+  img.addEventListener("click", () => {
     lightbox.classList.add("active");
     lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
   });
 });
 
-closeBtn.addEventListener("click",()=>{
+closeBtn.addEventListener("click", () => {
   lightbox.classList.remove("active");
 });
 
-lightbox.addEventListener("click",(e)=>{
-  if(e.target === lightbox){
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
     lightbox.classList.remove("active");
   }
 });
@@ -57,29 +62,32 @@ lightbox.addEventListener("click",(e)=>{
 const music = document.getElementById("siteMusic");
 const musicToggle = document.getElementById("musicToggle");
 
-music.volume = 0.15;
+if (music && musicToggle) {
+  music.volume = 0.15;
 
-if(localStorage.getItem("musicTime")){
-  music.currentTime = parseFloat(localStorage.getItem("musicTime"));
-}
-
-if(localStorage.getItem("musicPlaying") === "true"){
-  music.play().catch(()=>{});
-  musicToggle.textContent = "♫ Pause Music";
-}
-
-musicToggle.addEventListener("click",()=>{
-  if(music.paused){
-    music.play();
-    localStorage.setItem("musicPlaying","true");
-    musicToggle.textContent = "♫ Pause Music";
-  }else{
-    music.pause();
-    localStorage.setItem("musicPlaying","false");
-    musicToggle.textContent = "♫ Play Music";
+  const savedTime = localStorage.getItem("musicTime");
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
   }
-});
 
-setInterval(()=>{
-  localStorage.setItem("musicTime", music.currentTime);
-},1000);
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+    musicToggle.textContent = "♫ Pause Music";
+  }
+
+  musicToggle.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      musicToggle.textContent = "♫ Pause Music";
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      musicToggle.textContent = "♫ Play Music";
+    }
+  });
+
+  setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+  }, 1000);
+}
