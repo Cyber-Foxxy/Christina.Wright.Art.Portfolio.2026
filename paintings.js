@@ -1,4 +1,4 @@
-const music = document.getElementById("siteMusic");
+
 const musicToggle = document.getElementById("musicToggle");
 
 if (music && musicToggle) {
