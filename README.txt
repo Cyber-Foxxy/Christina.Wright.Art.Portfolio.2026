@@ -1,1 +1,0 @@
-Upload drawings.html, drawings.css, drawings.js, and images/drawings directly into your repo root. Homepage carousel link should be href="drawings.html".
