@@ -3,147 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christina Wright | Art Portfolio</title>
+  <title>Christina Wright Art Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="main-header" id="home">
-    <nav class="navbar">
-      <a class="logo" href="index.html">Christina Wright</a>
-      <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
-
-      <div class="nav-links">
-        <a href="photography.html">Photography</a>
-        <a href="comics.html">Comics</a>
-        <a href="digital-art.html">Digital Art</a>
-        <a href="drawings.html">Drawings</a>
-        <a href="paintings.html">Paintings</a>
-        <a href="sky-whale.html">Sky Whale</a>
-        <a href="web-design.html">Web Design</a>
-        <a href="web-games.html">Web Games</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <header class="site-header">
+    <h1>Christina Wright Art Portfolio</h1>
+    <p>Traditional art, comics, photography, web design, games, and story-driven visual worlds.</p>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="photography.html">Photography</a>
+      <a href="comics.html">Comics</a>
+      <a href="drawings.html">Drawings</a>
+      <a href="paintings.html">Paintings</a>
     </nav>
-
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Art • Illustration • Comics • Web Design</p>
-        <h1>Creative portfolio of Christina Wright</h1>
-        <p>
-          A professional art portfolio featuring traditional paintings, hand-drawn art,
-          digital artwork, comics, AI-assisted art, amateur photography, web design,
-          web games, and The Sky Whale Chronicles.
-        </p>
-
-        <div class="hero-buttons">
-          <a class="btn primary" href="#categories">Explore Categories</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="hero-feature">
-        <img src="images/NEON MUSHIES.jpg" alt="Featured neon mushroom painting" />
-      </div>
-    </section>
   </header>
 
   <main>
-    <section class="section intro-section">
-      <p class="eyebrow">Portfolio Categories</p>
-      <h2>Browse the work by category</h2>
-      <p>
-        Use the rotating image carousel below to explore each area of the portfolio.
-        Every category opens its own dedicated page for a cleaner, more professional gallery experience.
-      </p>
+    <section class="hero">
+      <h2>Portfolio Categories</h2>
+      <p>Click a category card to open its gallery page.</p>
     </section>
 
-    <section class="category-carousel-section" id="categories">
-      <button class="carousel-arrow prev" aria-label="Previous category">‹</button>
+    <section class="carousel-section" aria-label="Portfolio category carousel">
+      <button class="carousel-btn prev" type="button" aria-label="Previous category">&#10094;</button>
 
-      <div class="category-carousel" id="categoryCarousel">
-        <a class="category-slide" href="ai-art.html">
-          <img src="images/AI ART.jpeg" alt="AI art category thumbnail" />
-          <div class="slide-overlay"><span>01</span><h3>AI Art</h3><p>Generated and AI-assisted visual experiments.</p></div>
+      <div class="carousel-track" id="carouselTrack">
+        <a class="category-card" href="paintings.html">
+          <img src="images/paintings/painting-02.jpg" alt="Paintings category thumbnail" />
+          <span>Paintings</span>
         </a>
-
-       <a class="category-slide" href="photography.html">
-  <img src="images/photography/20240419_100654.jpg" alt="Photography category thumbnail" />
-
-  <div class="slide-overlay">
-    <span>02</span>
-    <h3>Photography</h3>
-    <p>Nature, landscapes, atmosphere, and everyday moments.</p>
-  </div>
-</a>
-    </div>
-</a>
-
-        <a class="category-slide" href="comics.html">
-          <img src="images/comics thumbnail.jpg" alt="Comics category thumbnail" />
-          <div class="slide-overlay"><span>03</span><h3>Comics</h3><p>Comic panels, storytelling, layouts, and sequential art.</p></div>
+        <a class="category-card" href="drawings.html">
+          <img src="images/paintings/painting-11.jpg" alt="Drawings category placeholder thumbnail" />
+          <span>Drawings</span>
         </a>
-
-        <a class="category-slide" href="digital-art.html">
-          <img src="images/e89d1c56-5d9e-41ff-957c-0259a814af5aorca-image-.jpg.jpeg" alt="Digital art category thumbnail" />
-          <div class="slide-overlay"><span>04</span><h3>Digital Art</h3><p>Digital illustration, fantasy design, and character artwork.</p></div>
+        <a class="category-card" href="photography.html">
+          <img src="images/paintings/painting-09.jpg" alt="Photography category placeholder thumbnail" />
+          <span>Photography</span>
         </a>
-
-        <a class="category-slide" href="drawings.html">
-          <img src="images/465605161_10224882230900383_1966014836447828528_n.jpg" alt="Drawings category thumbnail" />
-          <div class="slide-overlay"><span>05</span><h3>Drawings</h3><p>Pencil, graphite, hand-drawn characters, and studies.</p></div>
-        </a>
-
-        <a class="category-slide" href="paintings.html">
-          <img src="images/416716736_10222942627211503_7691808500595225283_n.jpg" alt="Paintings category thumbnail" />
-          <div class="slide-overlay"><span>06</span><h3>Paintings</h3><p>Traditional paintings, mixed media, and canvas work.</p></div>
-        </a>
-
-        <a class="category-slide" href="sky-whale.html">
-          <img src="images/61Pt4tpsYjL._AC_SL1500_.jpg" alt="The Sky Whale Chronicles category thumbnail" />
-          <div class="slide-overlay"><span>07</span><h3>The Sky Whale Chronicles</h3><p>Original story world, characters, concept art, and book-related visuals.</p></div>
-        </a>
-
-        <a class="category-slide" href="web-design.html">
-          <img src="images/ROBOT MOM.jpg" alt="Web design category thumbnail" />
-          <div class="slide-overlay"><span>08</span><h3>Web Page Design</h3><p>Creative webpage layouts, portfolio work, and front-end design.</p></div>
-        </a>
-
-        <a class="category-slide" href="web-games.html">
-          <img src="images/NEON MUSHIES.jpg" alt="Web games category thumbnail" />
-          <div class="slide-overlay"><span>09</span><h3>Web Games</h3><p>Interactive JavaScript games, class projects, and playful UI design.</p></div>
+        <a class="category-card" href="comics.html">
+          <img src="images/paintings/painting-17.jpg" alt="Comics category placeholder thumbnail" />
+          <span>Comics</span>
         </a>
       </div>
 
-      <button class="carousel-arrow next" aria-label="Next category">›</button>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </section>
-
-    <section class="section feature-grid-section">
-      <p class="eyebrow">Featured Areas</p>
-      <h2>Designed for art, story, and interactive media</h2>
-
-      <div class="feature-grid">
-        <article class="feature-card"><h3>Traditional & Hand Drawn</h3><p>Paintings, graphite work, character drawings, fantasy pieces, creature concepts, and traditional media.</p></article>
-        <article class="feature-card"><h3>Digital & AI Art</h3><p>Digital compositions, stylized character art, AI-assisted experiments, and fantasy-inspired visuals.</p></article>
-        <article class="feature-card"><h3>Comics & Story Worlds</h3><p>Sequential art, comic ideas, storytelling projects, and The Sky Whale Chronicles.</p></article>
-        <article class="feature-card"><h3>Web Design & Games</h3><p>Front-end pages, interactive projects, game design work, and creative coding experiments.</p></article>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Let’s create something imaginative.</h2>
-      <p class="contact-text">
-        Christina Wright<br />
-        Missoula, Montana<br />
-        Traditional Artist • Digital Artist • Web Designer • Media Arts & Animation
-      </p>
-      <a class="btn primary" href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a>
+      <button class="carousel-btn next" type="button" aria-label="Next category">&#10095;</button>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Christina Wright. All rights reserved.</p>
+  <footer>
+    <p>Contact: <a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a> | Missoula, MT</p>
   </footer>
 
   <script src="script.js"></script>
