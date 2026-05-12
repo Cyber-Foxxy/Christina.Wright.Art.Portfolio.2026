@@ -38,3 +38,92 @@
     padding: 1.5rem;
     color: white;
 }
+/* =========================
+   COMICS GALLERY PAGE
+========================= */
+
+.gallery-header {
+  text-align: center;
+  padding: 5rem 2rem 2rem;
+}
+
+.gallery-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-header p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.back-home {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  background: #444;
+}
+
+.gallery-page {
+  padding: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 20px;
+  background: #111;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
