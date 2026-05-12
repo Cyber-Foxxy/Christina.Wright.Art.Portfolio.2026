@@ -72,47 +72,99 @@ if (menuToggle && navLinks) {
   });
 }
 
-const slides = document.querySelectorAll(".category-slide");
-const prevBtn = document.querySelector(".carousel-arrow.prev");
-const nextBtn = document.querySelector(".carousel-arrow.next");
-const dotsContainer = document.getElementById("carouselDots");
+const galleryGrid = document.getElementById("galleryGrid");
 
-let currentIndex = 0;
+const paintings = [
+  "painting-01.jpg",
+  "painting-02.jpg",
+  "painting-03.jpg",
+  "painting-04.jpg",
+  "painting-05.jpg",
+  "painting-06.jpg",
+  "painting-07.jpg",
+  "painting-08.jpg",
+  "painting-09.jpg",
+  "painting-10.jpg",
+  "painting-11.jpg",
+  "painting-12.jpg",
+  "painting-13.jpg",
+  "painting-14.jpg",
+  "painting-15.jpg",
+  "painting-16.jpg",
+  "painting-17.jpg",
+  "painting-18.jpg"
+];
 
-function updateCarousel() {
-  slides.forEach((slide, index) => {
-    slide.className = "category-slide";
+paintings.forEach((file, index) => {
+  const item = document.createElement("div");
+  item.className = "gallery-item";
 
-    const diff = (index - currentIndex + slides.length) % slides.length;
+  item.innerHTML = `
+    <img 
+      src="images/paintings/${file}" 
+      alt="Painting ${index + 1}"
+      loading="lazy"
+    >
+  `;
 
-    if (diff === 0) slide.classList.add("active");
-    else if (diff === 1) slide.classList.add("next-slide");
-    else if (diff === 2) slide.classList.add("far-next");
-    else if (diff === slides.length - 1) slide.classList.add("prev-slide");
-    else if (diff === slides.length - 2) slide.classList.add("far-prev");
+  galleryGrid.appendChild(item);
+});
+
+const images = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeBtn = document.querySelector(".close-lightbox");
+
+images.forEach((img) => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("active");
+  }
+});
+
+const music = document.getElementById("siteMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (music && musicToggle) {
+  music.volume = 0.15;
+
+  const savedTime = localStorage.getItem("musicTime");
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
+
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+    musicToggle.textContent = "♫ Pause Music";
+  }
+
+  musicToggle.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      localStorage.setItem("musicPlaying", "true");
+      musicToggle.textContent = "♫ Pause Music";
+    } else {
+      music.pause();
+      localStorage.setItem("musicPlaying", "false");
+      musicToggle.textContent = "♫ Play Music";
+    }
   });
 
-  document.querySelectorAll(".carousel-dot").forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentIndex);
-  });
+  setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+  }, 1000);
 }
-
-if (slides.length && dotsContainer) {
-  slides.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.className = "carousel-dot";
-    dot.setAttribute("aria-label", `Go to category ${index + 1}`);
-    dot.addEventListener("click", () => {
-      currentIndex = index;
-      updateCarousel();
-    });
-    dotsContainer.appendChild(dot);
-  });
-
-  prevBtn?.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
 
   nextBtn?.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % slides.length;
