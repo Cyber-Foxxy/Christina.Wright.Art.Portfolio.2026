@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comics | Christina Wright Art Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="comics.css" />
+</head>
+<body class="comics-page">
+  <nav class="navbar gallery-nav">
+    <a class="logo" href="index.html">Christina Wright</a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ai-art.html">AI Art</a>
+      <a href="photography.html">Photography</a>
+      <a href="comics.html" aria-current="page">Comics</a>
+      <a href="digital-art.html">Digital Art</a>
+      <a href="drawings.html">Drawings</a>
+      <a href="paintings.html">Paintings</a>
+      <a href="sky-whale.html">Sky Whale</a>
+      <a href="web-design.html">Web Design</a>
+      <a href="web-games.html">Web Games</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="comic-hero">
+    <div class="comic-hero-content">
+      <p class="eyebrow">Comics • Manga Studies • Sequential Art</p>
+      <h1>Comics & Sequential Art</h1>
+      <p>
+        Hand-drawn comic studies, manga-inspired storytelling, watercolor panels,
+        and early rough draft pages from <strong>The Skywhale Chronicles: The Bullie Brigade</strong>.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#comic-gallery">View Gallery</a>
+        <a class="btn secondary" href="index.html#categories">Back to Categories</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-intro section">
+      <p class="eyebrow">Featured Comic Work</p>
+      <h2>Story pages, panel studies, and character moments</h2>
+      <p>
+        Click any image to open it in the fullscreen viewer.
+      </p>
+    </section>
+
+    <section class="comic-gallery-grid" id="comic-gallery" aria-label="Comics gallery">
+      <article class="comic-card">
+        <img src="images/comics/comic-panel-study.jpg" alt="Single watercolor comic panel study of Eve testing ice powers" />
+        <div class="comic-card-text"><h3>Comic Panel Study</h3><p>Single panel watercolor story-building study.</p></div>
+      </article>
+
+      <article class="comic-card">
+        <img src="images/comics/skywhale-rough-draft-01.jpg" alt="The Skywhale Chronicles rough draft comic page introducing Moose and Zephyr" />
+        <div class="comic-card-text"><h3>Skywhale Rough Draft 01</h3><p>Early rough draft page from The Skywhale Chronicles graphic novel.</p></div>
+      </article>
+
+      <article class="comic-card">
+        <img src="images/comics/skywhale-rough-draft-02.jpg" alt="The Skywhale Chronicles rough draft comic page showing Moose aboard ship" />
+        <div class="comic-card-text"><h3>Skywhale Rough Draft 02</h3><p>Moose arriving aboard the ship in the first rough draft sequence.</p></div>
+      </article>
+
+      <article class="comic-card">
+        <img src="images/comics/skywhale-rough-draft-03.jpg" alt="The Skywhale Chronicles rough draft comic page showing Zephyr flying" />
+        <div class="comic-card-text"><h3>Skywhale Rough Draft 03</h3><p>Zephyr’s aircraft sequence from the early rough draft.</p></div>
+      </article>
+
+      <article class="comic-card">
+        <img src="images/comics/manga-study-01.jpg" alt="Hand drawn manga style comic study page with fox spirit and girl" />
+        <div class="comic-card-text"><h3>Manga Study 01</h3><p>Hand-drawn and inked manga-style sequential page.</p></div>
+      </article>
+
+      <article class="comic-card">
+        <img src="images/comics/manga-study-02.jpg" alt="Hand drawn manga style comic page with fox spirit receiving a macaroon" />
+        <div class="comic-card-text"><h3>Manga Study 02</h3><p>Follow-up manga-inspired study page with expressive panel pacing.</p></div>
+      </article>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-lightbox" type="button" aria-label="Close image viewer">×</button>
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">‹</button>
+    <img class="lightbox-img" id="lightboxImg" alt="Expanded comic artwork" />
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">›</button>
+  </div>
+
+  <footer class="footer">
+    <p>Contact: <a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a> | Missoula, MT</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="comics.js"></script>
+</body>
+</html>
