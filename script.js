@@ -1,4 +1,40 @@
-const menuToggle = document.querySelector(".menu-toggle");
+const music = document.getElementById("siteMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (music && musicToggle) {
+  music.volume = 0.18;
+
+  const savedTime = localStorage.getItem("musicTime");
+  const musicOn = localStorage.getItem("musicOn") === "true";
+
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
+
+  musicToggle.textContent = musicOn ? "♫ Resume Music" : "♫ Play Music";
+
+  musicToggle.addEventListener("click", async () => {
+    try {
+      if (music.paused) {
+        await music.play();
+        localStorage.setItem("musicOn", "true");
+        musicToggle.textContent = "♫ Pause Music";
+      } else {
+        music.pause();
+        localStorage.setItem("musicOn", "false");
+        musicToggle.textContent = "♫ Play Music";
+      }
+    } catch (error) {
+      musicToggle.textContent = "Click Again";
+    }
+  });
+
+  setInterval(() => {
+    if (!music.paused) {
+      localStorage.setItem("musicTime", music.currentTime);
+    }
+  }, 500);
+}const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 if (menuToggle && navLinks) {
