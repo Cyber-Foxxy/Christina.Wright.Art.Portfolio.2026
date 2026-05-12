@@ -1,33 +1,4 @@
-
-const musicToggle = document.getElementById("musicToggle");
-
-if (music && musicToggle) {
-  music.volume = 0.15;
-
-  const savedTime = localStorage.getItem("musicTime");
-  if (savedTime) music.currentTime = parseFloat(savedTime);
-
-  if (localStorage.getItem("musicPlaying") === "true") {
-    music.play().catch(() => {});
-    musicToggle.textContent = "♫ Pause Music";
-  }
-
-  musicToggle.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      localStorage.setItem("musicPlaying", "true");
-      musicToggle.textContent = "♫ Pause Music";
-    } else {
-      music.pause();
-      localStorage.setItem("musicPlaying", "false");
-      musicToggle.textContent = "♫ Play Music";
-    }
-  });
-
-  setInterval(() => {
-    localStorage.setItem("musicTime", music.currentTime);
-  }, 1000);
-}const galleryGrid = document.getElementById("galleryGrid");
+const galleryGrid = document.getElementById("galleryGrid");
 
 for(let i=1;i<=18;i++){
 
