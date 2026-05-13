@@ -43,3 +43,42 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") showComic(-1);
   if (event.key === "ArrowRight") showComic(1);
 });
+/* Music player */
+const music = document.getElementById("siteMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+if (music && musicToggle) {
+  music.volume = 0.15;
+
+  const savedTime = localStorage.getItem("musicTime");
+
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
+
+  if (localStorage.getItem("musicPlaying") === "true") {
+    musicToggle.textContent = "♫ Resume Music";
+  }
+
+  musicToggle.addEventListener("click", async () => {
+    try {
+      if (music.paused) {
+        await music.play();
+        localStorage.setItem("musicPlaying", "true");
+        musicToggle.textContent = "♫ Pause Music";
+      } else {
+        music.pause();
+        localStorage.setItem("musicPlaying", "false");
+        musicToggle.textContent = "♫ Play Music";
+      }
+    } catch {
+      musicToggle.textContent = "Click Again";
+    }
+  });
+
+  setInterval(() => {
+    if (!music.paused) {
+      localStorage.setItem("musicTime", music.currentTime);
+    }
+  }, 1000);
+}
