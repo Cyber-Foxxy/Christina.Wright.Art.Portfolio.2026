@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Games | Christina Wright Art Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="web-games.css" />
+</head>
+<body class="web-games-page">
+  <div class="sparkle-bg" aria-hidden="true"></div>
+
+  <audio id="siteMusic" loop preload="metadata">
+    <source src="delosound-lofi-chill-2-466475.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="musicToggle" class="music-toggle" type="button">♫ Play Music</button>
+
+  <nav class="navbar gallery-nav">
+    <a class="logo" href="index.html">Christina Wright</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="photography.html">Photography</a>
+      <a href="comics.html">Comics</a>
+      <a href="digital-art.html">Digital Art</a>
+      <a href="drawings.html">Drawings</a>
+      <a href="paintings.html">Paintings</a>
+      <a href="sky-whale.html">Sky Whale</a>
+      <a href="web-design.html">Web Design</a>
+      <a href="web-games.html" aria-current="page">Web Games</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="games-hero">
+    <div class="games-hero-content">
+      <p class="eyebrow">Web Games • JavaScript • Interactive Media</p>
+      <h1>Web Games</h1>
+      <p>A collection of interactive class projects, mini games, creative coding experiments, and story-driven browser games built with HTML, CSS, JavaScript, and GitHub Pages.</p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#game-projects">Play Projects</a>
+        <a class="btn secondary" href="index.html#categories">Back to Categories</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-intro section">
+      <p class="eyebrow">Featured Web Games</p>
+      <h2>Interactive projects and playable GitHub Pages links</h2>
+      <p>Click any game card to open the live project in a new tab.</p>
+    </section>
+
+    <section class="game-project-grid" id="game-projects" aria-label="Web games projects">
+      <a class="game-card" href="https://cyber-foxxy.github.io/the-sky-whale/" target="_blank" rel="noopener noreferrer"><div class="game-number">01</div><h3>The Sky Whale</h3><p>A story-world inspired browser project connected to The Sky Whale universe.</p><span class="game-link-label">Play Game →</span></a>
+      <a class="game-card" href="https://cyber-foxxy.github.io/Mr.-Justice/" target="_blank" rel="noopener noreferrer"><div class="game-number">02</div><h3>Mr. Justice</h3><p>An interactive project featuring the adventurous robot character Mr. Justice.</p><span class="game-link-label">Play Game →</span></a>
+      <a class="game-card" href="https://cyber-foxxy.github.io/Astronaut-Luna-Moon-/" target="_blank" rel="noopener noreferrer"><div class="game-number">03</div><h3>Astronaut Luna Moon</h3><p>A space-themed browser game project with playful movement and interactive goals.</p><span class="game-link-label">Play Game →</span></a>
+      <a class="game-card" href="https://cyber-foxxy.github.io/Oz-Mini-game/" target="_blank" rel="noopener noreferrer"><div class="game-number">04</div><h3>Oz Mini Game</h3><p>A mini game project inspired by fantasy adventure and playful web interaction.</p><span class="game-link-label">Play Game →</span></a>
+      <a class="game-card" href="https://cyber-foxxy.github.io/Oceans-Treasures-Pearls-/" target="_blank" rel="noopener noreferrer"><div class="game-number">05</div><h3>Ocean’s Treasures Pearls</h3><p>An ocean-themed interactive project focused on treasure, pearls, and discovery.</p><span class="game-link-label">Play Game →</span></a>
+    </section>
+
+    <section class="homepage-note section">
+      <p class="eyebrow">Homepage Link Setup</p>
+      <h2>Carousel thumbnail path</h2>
+      <p>Use <strong>images/web-games/web-games-thumbnail.jpg</strong> for the homepage carousel image, and link the card to <strong>web-games.html</strong>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Contact: <a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a> | Missoula, MT</p>
+    <p>© <span id="year"></span> Christina Wright. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="web-games.js"></script>
+</body>
+</html>
