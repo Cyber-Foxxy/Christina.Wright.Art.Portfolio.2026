@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Page Design | Christina Wright Art Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="web-design.css" />
+</head>
+
+<body class="web-design-page">
+  <div class="sparkle-bg" aria-hidden="true"></div>
+
+  <audio id="siteMusic" loop preload="metadata">
+    <source src="delosound-lofi-chill-2-466475.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="musicToggle" class="music-toggle" type="button">♫ Play Music</button>
+
+  <nav class="navbar gallery-nav">
+    <a class="logo" href="index.html">Christina Wright</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu">☰</button>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="photography.html">Photography</a>
+      <a href="comics.html">Comics</a>
+      <a href="digital-art.html">Digital Art</a>
+      <a href="drawings.html">Drawings</a>
+      <a href="paintings.html">Paintings</a>
+      <a href="sky-whale.html">Sky Whale</a>
+      <a href="web-design.html" aria-current="page">Web Design</a>
+      <a href="web-games.html">Web Games</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="web-hero">
+    <div class="web-hero-content">
+      <p class="eyebrow">Web Design • Class Projects • Front-End Layouts</p>
+      <h1>Web Page Design</h1>
+      <p>
+        A collection of class-built webpages, creative layouts, interactive page projects,
+        and front-end design practice using HTML, CSS, JavaScript, AJAX, and GitHub Pages.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn primary" href="#web-projects">View Projects</a>
+        <a class="btn secondary" href="index.html#categories">Back to Categories</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-intro section">
+      <p class="eyebrow">Featured Web Projects</p>
+      <h2>Class projects and live GitHub Pages links</h2>
+      <p>Click any project card to open the live webpage in a new tab.</p>
+    </section>
+
+    <section class="web-project-grid" id="web-projects" aria-label="Web design projects">
+      <a class="project-card" href="https://cyber-foxxy.github.io/The-Skywhale-Chronicles-Bullie-Brigade-ajax-project/" target="_blank" rel="noopener noreferrer">
+        <div class="project-number">01</div>
+        <h3>The Skywhale Chronicles AJAX Project</h3>
+        <p>A story-world web project using AJAX-style content loading and original Sky Whale Chronicles/Bullie Brigade material.</p>
+        <span class="project-link-label">Open Project →</span>
+      </a>
+
+      <a class="project-card" href="https://cyber-foxxy.github.io/slides/" target="_blank" rel="noopener noreferrer">
+        <div class="project-number">02</div>
+        <h3>Slides Project</h3>
+        <p>A web-based slide project built for class presentation and visual layout practice.</p>
+        <span class="project-link-label">Open Project →</span>
+      </a>
+
+      <a class="project-card" href="https://cyber-foxxy.github.io/Homework-5_Wright-Fuji/" target="_blank" rel="noopener noreferrer">
+        <div class="project-number">03</div>
+        <h3>Homework 5: Fuji</h3>
+        <p>A class webpage project focused on structure, visual design, and page presentation.</p>
+        <span class="project-link-label">Open Project →</span>
+      </a>
+
+      <a class="project-card" href="https://cyber-foxxy.github.io/Home-work-4_choices/" target="_blank" rel="noopener noreferrer">
+        <div class="project-number">04</div>
+        <h3>Homework 4: Choices</h3>
+        <p>A choice-based webpage project practicing navigation, layout, and interactive storytelling.</p>
+        <span class="project-link-label">Open Project →</span>
+      </a>
+    </section>
+
+    <section class="homepage-note section">
+      <p class="eyebrow">Homepage Link Setup</p>
+      <h2>Carousel thumbnail path</h2>
+      <p>
+        Use <strong>images/web-design/web-design-thumbnail.jpg</strong> for the homepage carousel image,
+        and link the card to <strong>web-design.html</strong>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Contact: <a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a> | Missoula, MT</p>
+    <p>© <span id="year"></span> Christina Wright. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="web-design.js"></script>
+</body>
+</html>
