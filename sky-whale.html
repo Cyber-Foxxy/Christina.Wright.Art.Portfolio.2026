@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sky Whale Chronicles | Christina Wright Art Portfolio</title>
+  <link rel="stylesheet" href="sky-whale.css" />
+</head>
+<body class="sky-page">
+  <div class="sparkle-bg" aria-hidden="true"></div>
+  <div class="steam-layer" aria-hidden="true"></div>
+
+  <audio id="siteMusic" loop preload="auto">
+    <source src="Clockwork Dreams.mp3" type="audio/mpeg" />
+    <source src="delosound-lofi-chill-2-466475.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="musicToggle" class="music-toggle" type="button">♫ Play Music</button>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">Christina Wright</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="ai-art.html">AI Art</a>
+      <a href="photography.html">Photography</a>
+      <a href="comics.html">Comics</a>
+      <a href="digital-art.html">Digital Art</a>
+      <a href="drawings.html">Drawings</a>
+      <a href="paintings.html">Paintings</a>
+      <a href="sky-whale.html" aria-current="page">Sky Whale</a>
+      <a href="web-design.html">Web Design</a>
+      <a href="web-games.html">Web Games</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow">Steampunk • Graphic Novel • Original Story World</p>
+      <h1>The Sky Whale Chronicles</h1>
+      <p>
+        Character art, airship concepts, graphic novel pages, villains, relics,
+        and worldbuilding pieces from Christina Wright’s steampunk adventure universe.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#gallery">View Gallery</a>
+        <a class="btn secondary" href="index.html#categories">Back to Portfolio Categories</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="images/sky-whale/sky-whale-thumbnail.jpg" alt="The Sky Whale airship thumbnail" />
+      <span>Archive Ready</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <p class="eyebrow">Archive Gallery</p>
+      <h2>Browse the Sky Whale world</h2>
+      <p>
+        Use the filters to jump between the airship, heroes, villains, creatures,
+        and story-page artwork. Click any image to open the full viewer.
+      </p>
+      <div class="filter-buttons" id="filterButtons" aria-label="Gallery filters"></div>
+    </section>
+
+    <section class="gallery-grid" id="gallery" aria-label="Sky Whale Chronicles image gallery"></section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightboxImg" alt="Expanded Sky Whale Chronicles artwork" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">›</button>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Christina Wright • The Sky Whale Chronicles</p>
+    <p><a href="mailto:Christinawright1981@gmail.com">Christinawright1981@gmail.com</a> | Missoula, MT</p>
+  </footer>
+
+  <script src="sky-whale.js"></script>
+</body>
+</html>
